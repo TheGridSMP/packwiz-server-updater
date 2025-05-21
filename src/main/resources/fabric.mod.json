@@ -3,28 +3,30 @@
   "id": "packwizsu",
   "version": "${version}",
 
-  "name": "Packwiz Server updater",
-  "description": "Updates packwiz serverside",
+  "name": "PackWiz Server Updater",
+  "description": "Updates packwiz modpacks server-side.",
   "authors": [
     "Sleepy Evelyn"
   ],
   "contact": {
-    "homepage": "https://modrinth.com/mod/packwiz-server-updater",
-    "sources": "https://github.com/The-Tiny-Taters/packwiz-server-updater"
+    "homepage_old": "https://modrinth.com/mod/packwiz-server-updater",
+    "sources": "https://github.com/TheGridSMP/packwiz-server-updater"
   },
 
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/packwizsu/icon.png",
 
   "environment": "server",
   "entrypoints": {
     "server": [
-      "sleepy_evelyn.packwizsu.Packwizsu"
+      "sleepy_evelyn.packwizsu.PackWizSU"
     ]
   },
   "depends": {
     "fabricloader": ">=0.7.0",
-    "minecraft": ">=1.19"
+    "fabric": "*",
+    "minecraft": "~{minecraft_version}",
+    "cloth-config": ">=${cloth_version}"
   },
   "mixins": [
     "packwizsu.mixins.json"

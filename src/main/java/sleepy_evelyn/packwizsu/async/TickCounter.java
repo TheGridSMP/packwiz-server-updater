@@ -1,4 +1,4 @@
-package sleepy_evelyn.packwizsu.util;
+package sleepy_evelyn.packwizsu.async;
 
 public class TickCounter {
 
@@ -17,11 +17,10 @@ public class TickCounter {
     }
 
     public boolean test() {
-        if(counter >= tickThreshold) {
-            reset();
-            return true;
-        }
-        return false;
+        if (counter < tickThreshold) return false;
+
+        reset();
+        return true;
     }
 
     public void increment() {
@@ -34,6 +33,4 @@ public class TickCounter {
     }
 
     public int value() { return this.counter; }
-
-    public int getTickThreshold() { return this.tickThreshold; }
 }
